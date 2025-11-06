@@ -84,7 +84,7 @@
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = source;
       new Plyr(video);
-      video.muted = true;
+      video.muted = false;
       video.play().then(() => { video.muted = false; }).catch(err => console.log("Autoplay blocked:", err));
     } else {
       document.body.innerHTML = '<p>Your browser does not support HLS playback.</p>';
